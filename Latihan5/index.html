@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 5</title>
+</head>
+<body>
+    <h2>Pendaftaran Bantuan Pulsa</h2>
+    <form action="halaman2.php" method="POST">
+        Nama: <input type="text" name="nama"><br><br>
+        NIM: <input type="number" name="nim"><br><br>
+        Jenis Kelamin:
+        <input type="radio" name="gender" value="Laki-laki" required>Laki-laki
+        <input type="radio" name="gender" value="Perempuan">Perempuan
+        <br><br>
+        Hobi:
+        <input type="checkbox" name="hobi" value="Ngoding">Ngoding
+        <input type="checkbox" name="hobi" value="Ngegame">Ngegame
+        <input type="checkbox" name="hobi" value="Sport">Sport
+        <br><br>
+        Agama: 
+        <select name="agama">
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Budha">Budha</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Kirim">&nbsp;<input type="reset" value="Batal">
+    </form>
+</body>
+</html>
