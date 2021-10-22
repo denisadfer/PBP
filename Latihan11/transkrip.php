@@ -1,6 +1,12 @@
 <?php 
 //unboxing
 session_start();
+
+if(!isset($_SESSION["sun"])) {
+  header("Location: index.php");
+  exit;
+}
+
 $nama = $_SESSION["sun"];
 $pasw = $_SESSION["spw"];
 ?>
@@ -17,6 +23,8 @@ $pasw = $_SESSION["spw"];
 
 <body>
   <h1>Selamat datang, <?= $nama; ?> di halaman Transkrip</h1>
+  <a href="rmk.php">
+    << Back</a>
 </body>
 
 </html>

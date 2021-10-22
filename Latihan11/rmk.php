@@ -28,6 +28,7 @@ var_dump($books);
 <body>
   <a href="logout.php" style="float: right;">Logout</a>
   <h1>Selamat datang, <?= $nama; ?> di halaman RMK</h1><br>
+  <a href="transkrip.php">Transkrip >></a>
 
   <?php foreach ($books as $book) : ?>
   <ul>
