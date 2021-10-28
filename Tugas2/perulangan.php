@@ -7,11 +7,11 @@ echo "<br>";
 ?>
 
 <!-- <?php
-$j = 25;
-while ($j <= 75) {
-    echo ($j % 2 != 0) ? "<font color='blue'><b>$j</b></font><br>" : "$j<br>";
-    $j++;
-}
+// $j = 25;
+// while ($j <= 75) {
+//     echo ($j % 2 != 0) ? "<font color='blue'><b>$j</b></font><br>" : "$j<br>";
+//     $j++;
+// }
 ?> -->
 
 <!-- <!DOCTYPE html>

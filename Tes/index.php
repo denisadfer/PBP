@@ -23,7 +23,20 @@
       echo ":)";
     }
     ?>
+
   </h1>
+
+  <?php if (isset($_POST['nama'])) : ?>
+  <table border=1 cellpadding=10 cellspacing=0>
+    <tr>
+      <th colspan=2>Hasil Manipulasi String</th>
+    </tr>
+    <tr>
+      <td>Kalimat</td>
+      <td><?= $_POST['nama']; ?></td>
+    </tr>
+  </table>
+  <?php endif; ?>
 </body>
 
 </html>
