@@ -50,11 +50,11 @@ $datas = $driver->getAllDriver();
       <tr>
         <td><?= $data['nama']; ?></td>
         <td>
-          <a name="rate" href="../controller/vote.php?id=<?= $data["id"]; ?>&vote=<?= $data["vote"]; ?>&star=1"
+          <a name="rate" href="../controller/rate.php?id=<?= $data["id"]; ?>&vote=<?= $data["vote"]; ?>&star=1"
             style="text-decoration:none">*</a>
-          <a name="rate" href="../controller/vote.php?id=<?= $data["id"]; ?>&vote=<?= $data["vote"]; ?>&star=2"
+          <a name="rate" href="../controller/rate.php?id=<?= $data["id"]; ?>&vote=<?= $data["vote"]; ?>&star=2"
             style="text-decoration:none">*</a>
-          <a name="rate" href="../controller/vote.php?id=<?= $data["id"]; ?>&vote=<?= $data["vote"]; ?>&star=3"
+          <a name="rate" href="../controller/rate.php?id=<?= $data["id"]; ?>&vote=<?= $data["vote"]; ?>&star=3"
             style="text-decoration:none">*</a>
         </td>
       </tr>
@@ -72,7 +72,7 @@ $datas = $driver->getAllDriver();
         <td><?= $data['nama']; ?></td>
         <td><?= $data['vote']; ?></td>
         <?php 
-      $total = $total + $data['vote'];
+      $total += $data['vote'];
       ?>
       </tr>
       <?php endforeach; ?>
@@ -80,11 +80,6 @@ $datas = $driver->getAllDriver();
   </form>
   <h3>Total Bintang: <?= $total; ?></h3>
 
-  <?php #if (isset($_POST['rate'])) : ?>
-  <!-- <script>
-  document.location = "#rate";
-  </script> -->
-  <?php #endif; ?>
 </body>
 
 </html>

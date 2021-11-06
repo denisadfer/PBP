@@ -2,19 +2,19 @@
 include "../class/Driver.php";
 
 $driver = new Driver();
-$check = $driver->editData($_GET['id'], $_GET['vote'], $_GET['star']);
+$check = $driver->setRate($_GET['id'], $_GET['vote'], $_GET['star']);
 
 if ($check) {
   echo "
     <script>
-    alert('Vote Berhasil!')
+    alert('Rate Berhasil!')
     document.location.href = '../view/index.php';
     </script>
     ";
 } else {
   echo "
     <script>
-    alert('Vote Gagal!')
+    alert('Rate Gagal!')
     document.location.href = '../view/index.php';
     </script>
   ";

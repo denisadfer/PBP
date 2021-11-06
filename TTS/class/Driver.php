@@ -24,7 +24,7 @@ class Driver {
     return $this->dataojek;
   }
 
-  public function editData($id, $vote, $star)
+  public function setRate($id, $vote, $star)
   {
     $rate = (int)$vote + (int)$star;
     $query = $this->db->prepare("UPDATE tbojek SET vote = :vt  WHERE id={$id}");
