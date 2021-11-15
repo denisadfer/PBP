@@ -14,12 +14,17 @@
       <th>Kode</th>
       <th>Nama Barang</th>
       <th>Harga</th>
+      <th>Action</th>
     </tr>
     @foreach($barang as $b)
     <tr>
       <td>{{ $b->kode }}</td>
       <td>{{ $b->nama }}</td>
       <td>{{ $b->harga }}</td>
+      <td>
+        <a href="/editbarang/{{ $b->id }}">Edit</a> |
+        <a href="/proses_delete/{{ $b->id }}" onclick="return confirm('Yakin ingin dihapus?');">Delete</a>
+      </td>
     </tr>
     @endforeach
   </table>

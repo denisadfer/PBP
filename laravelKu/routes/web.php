@@ -24,3 +24,15 @@ Route::get('/hw', function () {
 Route::get('/chw', 'controllerku@fhw');
 
 Route::get('/tampilbarang', 'controllerku@tampilBarang');
+
+Route::get('/tambahbarang', function () {
+    return view('tambahbarang');
+});
+
+Route::post('/proses_insert', 'controllerku@tambahBarang');
+
+Route::get('/editbarang/{id}', 'controllerku@tampilEdit');
+
+Route::post('/proses_edit', 'controllerku@editBarang');
+
+Route::get('/proses_delete/{id}', 'controllerku@deleteBarang');
