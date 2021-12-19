@@ -21,8 +21,8 @@ class Mydb {
   {
     $query = $this->db->prepare("SELECT * FROM tbsiswa");
     $query->execute();
-    $data = $query->fetchAll();
-    $this->datasiswa = $data;
+    $this->datasiswa = $query->fetchAll();
+    
     return $this->datasiswa;
   }
 
@@ -41,12 +41,13 @@ class Mydb {
     $query->execute();
     $data = $query->fetchAll();
     $this->datasiswa = $data;
+    
     return $this->datasiswa;
   }
 
   public function edit_data($no, $nis, $nama)
   {
-    $query = $this->db->prepare("UPDATE tbsiswa SET nis = :ns, nama = :nm  WHERE no={$no}");
+    $query = $this->db->prepare("UPDATE tbsiswa SET nis = :ns, nama = :nm WHERE no={$no}");
     $query->bindParam(":ns",$nis);
     $query->bindParam(":nm",$nama);
     
@@ -56,6 +57,7 @@ class Mydb {
   public function hapus_data($no)
   {
     $query = $this->db->prepare("DELETE FROM tbsiswa WHERE no={$no}");
+    
     return $query->execute() ? true : false;
   }
 }
