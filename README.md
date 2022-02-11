@@ -1,1 +1,7 @@
-<h2>code from Pemrograman Berorientasi Platform</h2>
+# PBP Pemrograman Berorientasi Platform
+Code from the subject **Platform-Oriented Programming**.
+
+Tools:
+- HTML
+- CSS
+- PHP (Laravel)
